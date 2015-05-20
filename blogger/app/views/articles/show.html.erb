@@ -3,4 +3,8 @@
 <h2><%= @article.title %></h2>
 <p><%= @article.body %></p>
 
-<%= link_to "Go Back to Articles Index", articles_path %>
+<p><%= link_to "Edit", edit_article_path(@article) %></p>
+<p><%= link_to "delete", article_path(@article), method: :delete,
+	data: {confirm: "Really delete the article?"} %></p>
+
+<p><%= link_to "Go Back to Articles Index", articles_path %></p>
